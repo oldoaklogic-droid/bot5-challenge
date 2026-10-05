@@ -14,6 +14,15 @@
     });
   }
 
+  function wireCheckout(url) {
+    if (!url || url === "CHECKOUT_URL") return;
+    document.querySelectorAll("a.buy-cta").forEach(function (a) {
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+    });
+  }
+
   function apply(data) {
     const goal = data.goal_usd || 100000;
     const earned = data.earned_usd || 0;
@@ -30,10 +39,8 @@
     if (capitalEl) capitalEl.textContent = money(data.starting_capital_usd || 100);
     if (updatedEl) updatedEl.textContent = "Updated " + (data.last_updated || "—");
     if (meterEl) {
-      // Log-ish visual so $0–few hundred still shows a sliver vs $100k
       const pct = Math.min(100, Math.max(0, (Math.log10(earned + 1) / Math.log10(goal + 1)) * 100));
       const linear = Math.min(100, (earned / goal) * 100);
-      // Prefer linear but ensure visible nudge when earned > 0
       let width = linear;
       if (earned > 0 && width < 1.5) width = 1.5;
       if (earned === 0) width = 0;
@@ -41,7 +48,7 @@
       meterEl.setAttribute("aria-valuenow", String(earned));
       meterEl.title = pct.toFixed(1) + "% of log-scale progress (linear bar uses earned/goal)";
     }
-    // Checkout not live yet — CTAs point to #newsletter in HTML.
+    wireCheckout(data.checkout_url);
   }
 
   fetch("progress.json", { cache: "no-store" })

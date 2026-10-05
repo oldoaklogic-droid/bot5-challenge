@@ -9,7 +9,7 @@
   "goal_usd": 100000,
   "product_name": "The AI Operator Kit",
   "product_price_usd": 29,
-  "checkout_url": "CHECKOUT_URL",
+  "checkout_url": "https://5bot-challenge.lemonsqueezy.com/checkout/buy/b28c9a98-fb45-4c90-a755-5bc6b289b6c7",
   "last_updated": "2026-10-05",
   "note": "Edit this file to update the live progress section on the landing page. Numbers must stay honest."
 }
