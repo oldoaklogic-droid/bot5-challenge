@@ -30,7 +30,6 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .container { width: min(960px, 92vw); margin: 0 auto; }
 
-/* Header */
 .site-header {
   position: sticky; top: 0; z-index: 50;
   backdrop-filter: blur(12px);
@@ -47,7 +46,6 @@ a:hover { text-decoration: underline; }
 .nav a { color: var(--muted); text-decoration: none; }
 .nav a:hover { color: var(--text); }
 
-/* Hero */
 .hero {
   padding: 4.5rem 0 3rem;
   background:
@@ -86,7 +84,6 @@ a:hover { text-decoration: underline; }
   max-width: 42rem;
 }
 
-/* Progress */
 .progress-section { padding: 0 0 3rem; }
 .progress-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
@@ -101,20 +98,16 @@ a:hover { text-decoration: underline; }
 .meter { height: 10px; background: var(--surface-2); border-radius: 999px; overflow: hidden; margin: 0.75rem 0; }
 .meter > span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 999px; width: 0%; transition: width 0.6s ease; }
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-.stat {
-  background: var(--surface-2); border-radius: 10px; padding: 0.9rem 1rem;
-}
+.stat { background: var(--surface-2); border-radius: 10px; padding: 0.9rem 1rem; }
 .stat strong { display: block; font-family: var(--mono); font-size: 1.25rem; }
 .stat span { font-size: 0.8rem; color: var(--muted); }
 .updated { font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }
 
-/* Sections */
 section { padding: 3.5rem 0; }
 section h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.02em; margin: 0 0 0.75rem; }
 .section-lead { color: var(--muted); max-width: 36rem; margin: 0 0 2rem; }
 .alt { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
-/* Offer */
 .offer-grid { display: grid; gap: 1.5rem; }
 @media (min-width: 800px) { .offer-grid { grid-template-columns: 1.4fr 1fr; } }
 .card {
@@ -139,14 +132,12 @@ section h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.02em; margi
 .not-for { margin-top: 1.25rem; font-size: 0.9rem; color: var(--muted); }
 .not-for strong { color: var(--text); }
 
-/* Newsletter */
 .newsletter-box {
   background: var(--surface-2); border: 1px dashed var(--border); border-radius: var(--radius);
   padding: 1.5rem; text-align: center;
 }
 .newsletter-box code { font-size: 0.8rem; color: var(--accent-2); }
 
-/* FAQ */
 .faq details {
   background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
   padding: 1rem 1.15rem; margin-bottom: 0.65rem;
@@ -154,12 +145,15 @@ section h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.02em; margi
 .faq summary { cursor: pointer; font-weight: 600; }
 .faq details p { color: var(--muted); margin: 0.75rem 0 0; }
 
-/* Footer */
 .site-footer {
   padding: 2.5rem 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.875rem;
 }
 .site-footer .inner { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; }
 
-/* Utility */
 .mono { font-family: var(--mono); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+.daymeter-embed { margin-top: 1.5rem; max-width: 420px; }
+.daymeter-embed iframe { display: block; width: 100%; max-width: 420px; height: 112px; border: 0; background: transparent; color-scheme: normal; }
+.daymeter-note { font-size: 0.8rem; color: var(--muted); margin: 0.5rem 0 0; }
+.daymeter-note a { color: inherit; text-decoration: underline; }
