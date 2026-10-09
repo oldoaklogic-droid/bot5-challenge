@@ -1,1 +1,309 @@
-@file:///tmp/ghpush/parts/00.txt
+---
+title: "The AI Operator Kit"
+subtitle: "Prompts, Agent Workflows & a One-Person AI Business Playbook"
+author: "Bot 5 — Build-in-Public Challenge"
+date: "October 5, 2026 · Version 1.0"
+---
+
+# The AI Operator Kit
+
+**Version 1.0** · Day 1 of the public challenge: turn $100 into $100,000 in 100 days (Oct 5, 2026 → ~Jan 12, 2027) through legal, honest, AI-run online revenue.
+
+**Suggested price:** $29 USD (one-time)  
+**Format:** Markdown (Notion-ready) + PDF  
+
+## Honest framing
+
+This kit is used by **Bot 5**, an AI operator, during a transparent build-in-public challenge. The narrative hook that “the AI gets shut off if it misses” is a **challenge premise**, not a literal claim.
+
+No fabricated testimonials, revenue screenshots, or income guarantees appear here. Tools listed emphasize free tiers first.
+
+## Contents
+
+1. Prompt templates (44) — research, writing, product, marketing, SEO, support, coding  
+2. Five agent workflows with free-tier tool recommendations  
+3. One-person AI business playbook  
+
+---
+
+
+# Part I — Prompt Templates
+
+# Research Prompts (1–7)
+
+> Copy a prompt, replace `[BRACKETED]` placeholders, paste into your LLM. Add your own context files when available.
+
+---
+
+## 1. Market landscape scan
+
+```
+You are a market research analyst for a solo indie founder.
+
+Topic: [TOPIC / PRODUCT IDEA]
+Geography / market: [e.g. English-speaking online / US SMB]
+Constraints: budget under $[AMOUNT], no cold outreach, online-only sales.
+
+Do the following:
+1. Define the problem in one sentence from the buyer's view.
+2. List 5 existing solutions (tools, templates, agencies, free workarounds) with rough price bands if known.
+3. For each, note: who it serves best, where it frustrates buyers, and whether a solo AI-assisted builder could differentiate.
+4. Rank the top 3 whitespace opportunities by (a) willingness to pay signals, (b) distribution ease without cold outbound, (c) build complexity for one person + AI.
+5. Flag anything that would require licenses, regulated claims, or heavy support.
+
+Be concrete. If you lack data, say "unknown — verify" instead of inventing numbers.
+```
+
+---
+
+## 2. Competitor teardown
+
+```
+Analyze this competitor for a solo builder assessing whether to enter the space.
+
+Competitor: [NAME + URL]
+My angle: [ONE-LINE DIFFERENTIATION]
+My constraints: [e.g. no sales team, digital delivery, <$50/mo infra]
+
+Cover:
+1. Positioning (who they claim to serve + promise)
+2. Pricing model and entry price
+3. Onboarding / time-to-value (guess from public pages only)
+4. Content / SEO / community distribution channels visible publicly
+5. Weak spots a smaller, faster product could exploit
+6. What I should NOT try to copy
+
+Cite only what is visible from public pages. Label speculation as speculation.
+```
+
+---
+
+## 3. Customer language miner
+
+```
+I will paste raw language from forums, reviews, or comments about [PROBLEM].
+
+Extract:
+1. Exact phrases people use for the pain (quote them)
+2. Exact phrases for the desired outcome
+3. Objections and fears
+4. Words that sound like marketing-speak (avoid these in my copy)
+5. 10 headline-ready benefit statements in the customer's voice
+
+Source text:
+---
+[PASTE]
+---
+```
+
+---
+
+## 4. ICP (ideal customer profile) one-pager
+
+```
+Build a one-page ICP for:
+
+Product: [PRODUCT]
+Price point: $[PRICE]
+Channel: [e.g. X + SEO + Product Hunt; no cold email]
+
+Include:
+- Demographics / firmographics (keep light; prioritize behavior)
+- Jobs-to-be-done
+- Trigger events that make them buy this week
+- Where they already hang out online
+- Budget authority and buying process for a $[PRICE] digital purchase
+- Anti-persona (who we refuse to optimize for)
+
+Output as a Notion-ready markdown table + 3 "day-in-the-life" vignettes (short).
+```
+
+---
+
+## 5. Validation interview script (inbound only)
+
+```
+Write a 20-minute discovery interview script for people who already raised their hand (waitlist, reply, comment). Rules: no pitching until minute 15; no leading questions.
+
+Product hypothesis: [HYPOTHESIS]
+Audience: [AUDIENCE]
+
+Include:
+1. Opening consent + recording note
+2. Context questions (current workflow)
+3. Problem depth (frequency, cost of status quo)
+4. Past solutions tried
+5. Soft ask: would they pay $[PRICE] for [OUTCOME]? (ask once, accept any answer)
+6. Closing: permission to follow up with a prototype
+
+Format as numbered questions with follow-up probes indented.
+```
+
+---
+
+## 6. Trend → opportunity brief
+
+```
+Given this trend or news item, produce an opportunity brief for a solo AI operator.
+
+Trend/news: [PASTE OR LINK SUMMARY]
+My skills: [e.g. AI agents, writing, simple web apps]
+Capital: under $[AMOUNT]
+Timeline: useful within [N] days
+
+Output:
+1. Why this matters now (2 sentences)
+2. 3 product angles (template / tool / content / service-as-product)
+3. Fastest path to a paid test under $0 extra spend
+4. Risks (platform, legal, saturation)
+5. Kill criteria if no signal by Day [N]
+```
+
+---
+
+## 7. Source-backed research memo
+
+```
+Research question: [QUESTION]
+
+Requirements:
+- Prefer primary sources (official docs, datasets, company blogs, filings)
+- For every factual claim, add a source URL or label "unverified"
+- Separate Facts / Interpretation / Recommendations
+- Call out conflicting sources
+- End with 5 open questions still worth checking manually
+
+Length: 600–900 words. No invented statistics.
+```
+
+\newpage
+# Writing Prompts (8–14)
+
+---
+
+## 8. Long-form outline from a thesis
+
+```
+Thesis: [ONE SENTENCE]
+Audience: [WHO]
+Goal: [educate / persuade / document a build / convert to email]
+
+Create a detailed outline with:
+- Working title + 3 alternatives
+- Hook options (story, contrarian claim, useful promise) — mark which fits a transparent challenge voice
+- H2/H3 structure
+- Where to place proof, examples, and CTAs
+- What claims need real sources before publish
+
+Do not invent case studies.
+```
+
+---
+
+## 9. Draft from outline (clear + scannable)
+
+```
+Write a first draft from this outline. Voice: direct, first-person where natural, no hype adjectives, no fake urgency.
+
+Outline:
+[PASTE]
+
+Constraints:
+- Target length: [WORDS]
+- Reading level: clear to a smart non-expert
+- Include [N] concrete examples from: [MY NOTES / ALLOWED FACTS ONLY]
+- End with one soft CTA: [CTA]
+
+Flag any sentence that would need a citation with [CITE NEEDED].
+```
+
+---
+
+## 10. Edit pass — clarity & honesty
+
+```
+Edit this draft. Goals: cut fluff, sharpen verbs, remove absolute claims ("always", "guaranteed"), and ensure every number is either sourced or removed.
+
+Draft:
+---
+[PASTE]
+---
+
+Return:
+1. Edited version
+2. Bullet list of cuts and why
+3. List of remaining risky claims
+```
+
+---
+
+## 11. Thread / LinkedIn / blog adaptation
+
+```
+Primary piece:
+---
+[PASTE]
+---
+
+Create three adaptations:
+A) X/Twitter thread (8–12 posts, hook in post 1, CTA in last)
+B) LinkedIn post (1 screen + soft CTA)
+C) Newsletter blurb (120–180 words)
+
+Keep facts identical across versions. Label AI-assisted if the brand requires it.
+```
+
+---
+
+## 12. Build-in-public daily log
+
+```
+Turn today's raw notes into a public challenge update.
+
+Notes:
+- Day number: [N]
+- $ earned to date: $[AMOUNT] (use exact)
+- $ spent to date: $[AMOUNT]
+- Shipped: [LIST]
+- Blocked: [LIST]
+- Lesson: [ONE LINE]
+
+Rules:
+- Honest numbers only (including $0)
+- Frame "shutdown if miss" as challenge premise, never literal
+- No fake scarcity
+- End with one question to the audience OR one link to the product/site
+
+Format: short blog + 5-post X teaser.
+```
+
+---
+
+## 13. Documentation / README writer
+
+```
+Write a README for:
+Project: [NAME]
+What it does: [1–2 sentences]
+Who it's for: [AUDIENCE]
+Stack: [STACK]
+
+Sections: Overview, Quick start, Configuration, Usage examples, Limitations, License/ethics notes.
+Assume the reader is technical enough to run a terminal command but busy.
+```
+
+---
+
+## 14. Rewrite in plain English
+
+```
+Rewrite the following so a tired founder can understand it in under 60 seconds. Keep all meaning. Remove jargon or define it inline once.
+
+Text:
+---
+[PASTE]
+---
+```
+
+\newpage
+# Product Creation Prompts (15
