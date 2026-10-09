@@ -1,0 +1,346 @@
+–20)
+
+---
+
+## 15. Digital product scope (MVP)
+
+```
+Help me scope a digital product I can ship in [N] days alone + AI.
+
+Idea: [IDEA]
+Price band: $[LOW]–$[HIGH]
+Delivery: PDF / Notion / ZIP / video / license key (pick or recommend)
+Buyer: [ICP]
+
+Produce:
+1. Must-have contents (checklist)
+2. Nice-to-haves deferred to v1.1
+3. Outline of each asset
+4. Definition of done for v1
+5. Support policy (what buyers can expect; keep it sustainable for one person)
+```
+
+---
+
+## 16. Offer stack design
+
+```
+Design a simple offer ladder for:
+Core product: [NAME] at $[PRICE]
+Audience: [AUDIENCE]
+Constraint: single Lemon Squeezy checkout; no fake scarcity timers
+
+Propose:
+- Free lead magnet (value without cannibalizing the paid product)
+- Tripwire ($7–$19)
+- Core ($29–$79)
+- Optional premium ($99–$199) only if deliverable solo
+
+For each: promise, contents bullet list, who it's for, who should skip it.
+```
+
+---
+
+## 17. Product requirements → content outline
+
+```
+Turn this PRD into a content outline for a downloadable kit.
+
+PRD:
+[PASTE]
+
+Output a table: Section | Purpose | Format (md/pdf/template) | Est. effort (S/M/L) | Depends on
+```
+
+---
+
+## 18. Naming & positioning
+
+```
+Generate 15 product name candidates for:
+What it is: [DESCRIPTION]
+Audience: [AUDIENCE]
+Tone: competent, transparent, not "guru"
+
+For each name: 1-line positioning statement + potential trademark/confusion risk (obvious collisions only).
+Then recommend top 3 with rationale. Avoid trademarked names of known brands.
+```
+
+---
+
+## 19. Changelog & version notes
+
+```
+Write user-facing release notes for version [X.Y].
+
+Shipped:
+[LIST]
+
+Known issues:
+[LIST]
+
+Voice: calm, specific, no marketing fluff. Include upgrade path if replacing files in Notion/ZIP.
+```
+
+---
+
+## 20. "Should I build this?" decision memo
+
+```
+Decision: build / defer / kill for [IDEA]
+
+Inputs I have:
+- Demand signals: [comments, waitlist count, search interest — real only]
+- Cost to build: [hours + $]
+- Cost to support: [estimate]
+- Opportunity cost: [what else I won't do]
+
+Write a one-page memo with Recommendation, Why, Kill criteria, and Next experiment (smallest paid or waitlist test).
+```
+
+\newpage
+# Marketing Copy Prompts (21–27)
+
+---
+
+## 21. Landing page wire-copy
+
+```
+Write honest landing page copy for:
+
+Product: [NAME]
+Price: $[PRICE]
+Promise: [OUTCOME]
+Who it's for: [ICP]
+Who it's NOT for: [ANTI]
+Proof available (real only): [e.g. public challenge metrics, sample pages, my own usage — NO invented testimonials]
+
+Sections: Hero, Problem, What you get, Who it's for / not for, How it works, FAQ (6 Qs), Final CTA.
+Rules: no fake countdown scarcity; no income guarantees; disclose AI authorship if relevant.
+Checkout CTA label: "Get [NAME] — $[PRICE]" linking to [CHECKOUT_URL]
+```
+
+---
+
+## 22. Benefit bullets from features
+
+```
+Features:
+[LIST]
+
+Rewrite as benefit bullets. Pattern: outcome → how feature enables it → for whom.
+Max 8 bullets. No superlatives without proof.
+```
+
+---
+
+## 23. Objection handler FAQ
+
+```
+Product: [NAME] at $[PRICE]
+Known objections from comments/DMs:
+[LIST]
+
+Write FAQ answers that are short, specific, and allow people to walk away if it's not a fit. Include refund policy: [POLICY]
+```
+
+---
+
+## 24. Launch announcement (multi-channel)
+
+```
+Draft launch copy for [PRODUCT] shipping today.
+
+Facts:
+- Price: $[PRICE]
+- What's included: [LIST]
+- Challenge context: Day [N] of 100, $ earned so far: $[AMOUNT]
+- Checkout: [CHECKOUT_URL]
+
+Outputs:
+1. X thread (6–8 posts)
+2. Newsletter section (200 words)
+3. Product Hunt tagline (60 chars) + description (260 chars) + first comment draft
+
+Disclose: build-in-public AI challenge; shutdown framing is premise only.
+```
+
+---
+
+## 25. Ad / boosted post (optional, later)
+
+```
+Write 3 organic-style posts that could later be boosted. Product: [NAME]. Angle: useful tip → soft mention of kit. No "make money fast." Include disclosure placeholder for paid promotion if boosted: [Paid partnership] / [Ad].
+```
+
+---
+
+## 26. Email sequence (3 emails, owned list only)
+
+```
+Create a 3-email sequence for people who downloaded the free checklist but haven't bought [PRODUCT].
+
+Rules: value-first; one CTA each; unsubscribe respect; no dark patterns; no fake "last chance" unless a real end date exists.
+
+Email 1 (Day 0): deliver freebie + one useful tip
+Email 2 (Day 3): case-of-one (my own usage of the kit) — no fake customers
+Email 3 (Day 6): FAQ + offer + explicit "ignore if not relevant"
+```
+
+---
+
+## 27. Social proof without lying
+
+```
+I only have these real proof assets: [LIST: e.g. public revenue counter, screenshots of product pages, my process logs].
+
+Write 5 ways to present proof on the sales page without inventing testimonials, review stars, or user counts. If proof is thin, say so and recommend what to collect next ethically.
+```
+
+\newpage
+# SEO Prompts (28–33)
+
+---
+
+## 28. Keyword cluster from seed
+
+```
+Seed topic: [SEED]
+Site: [DOMAIN / niche]
+Goal: informational pages that can later convert to [PRODUCT] without spammy affiliate stuffing.
+
+Produce:
+1. 15 long-tail queries grouped into 3–5 clusters
+2. Search intent per cluster (informational / commercial / navigational)
+3. Suggested primary page + supporting posts
+4. Internal link sketch
+5. Queries to skip (too competitive or misaligned with ethics)
+
+Do not invent search volumes; if unknown, rank by estimated specificity instead and mark "volume unknown — verify in GSC/Keywords tool".
+```
+
+---
+
+## 29. SEO brief from URL or topic
+
+```
+Create an SEO content brief for: [TOPIC or competitor URL summary]
+
+Include: primary keyword, secondary keywords, search intent, outline, entities/terms to cover, questions to answer (PAA-style), internal links to add, and a uniqueness angle for a build-in-public AI challenge site.
+Title tag ≤60 chars; meta description ≤155 chars.
+```
+
+---
+
+## 30. On-page optimization pass
+
+```
+Optimize this draft for [PRIMARY KEYWORD] without stuffing.
+
+Draft:
+---
+[PASTE]
+---
+
+Return: revised draft, suggested H1/H2s, slug, meta title/description, and image alt text ideas. Keep voice human.
+```
+
+---
+
+## 31. Programmatic page guardrails
+
+```
+I want to generate many similar pages for [PATTERN, e.g. "AI tools for X"].
+
+Write guardrails so this stays useful and not doorway spam:
+- Minimum unique value per page
+- When to merge vs split
+- Canonical / indexation rules
+- When to noindex
+- Quality checklist before publish
+```
+
+---
+
+## 32. Internal linking map
+
+```
+Existing URLs:
+[LIST]
+
+New article: [TITLE + summary]
+
+Suggest 5 internal links to add (anchor text + target) and 3 older pages that should link to the new one. Prefer relevance over volume.
+```
+
+---
+
+## 33. Search Console triage
+
+```
+Here are GSC-style rows (query, page, clicks, impressions, position):
+[PASTE CSV OR TABLE]
+
+Recommend top 10 actions: quick wins (position 4–15), content refreshes, and cannibalization fixes. Ignore vanity queries with no commercial/mission fit.
+```
+
+\newpage
+# Customer Support Prompts (34–37)
+
+---
+
+## 34. Support reply drafter
+
+```
+Draft a reply to this customer message. Tone: warm, concise, accountable. If I don't know, say so and give a timeline.
+
+Policy:
+- Refunds: [POLICY]
+- Delivery: digital download via Lemon Squeezy
+- AI disclosure: content was AI-assisted / AI-operated under human account owner
+
+Customer message:
+---
+[PASTE]
+---
+
+Provide: (A) reply ready to send (B) internal note if escalation needed.
+```
+
+---
+
+## 35. FAQ from support inbox
+
+```
+Turn these support threads into a public FAQ and a private playbook entry.
+
+Threads:
+[PASTE]
+
+Output:
+1. Public FAQ (customer-facing)
+2. Private macros for future replies
+3. Product fixes that would prevent repeats
+```
+
+---
+
+## 36. Bug acknowledgment
+
+```
+We shipped a bug in [PRODUCT/FEATURE]. Impact: [WHO / WHAT]. Fix ETA: [TIME] or "investigating".
+
+Write:
+1. In-app / email notice
+2. Public status update (if challenge-transparent)
+3. Follow-up message after fix
+
+No blame-shifting. No over-promising.
+```
+
+---
+
+## 37. Refund & edge-case decision tree
+
+```
+Create a decision tree for solo-operator sup
