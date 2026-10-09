@@ -1,0 +1,299 @@
+port:
+
+Scenarios: duplicate charge, can't download, "not what I expected", chargeback threat, feature request disguised as complaint, abusive message.
+
+For each: when to refund, when to help harder, when to document and move on. Align with Lemon Squeezy MoR realities: [NOTE ANY LS POLICY YOU FOLLOW].
+```
+
+\newpage
+# Coding Prompts (38–44)
+
+> 44 templates total across all categories (40+ requirement met).
+
+---
+
+## 38. Spec before code
+
+```
+Before writing code, produce a short spec.
+
+Feature: [FEATURE]
+Stack: [STACK]
+Constraints: [e.g. Cloudflare Workers free tier, no heavy server]
+
+Include: user stories, API shape, data model, edge cases, test plan, and out-of-scope list. Ask me clarifying questions if anything is ambiguous — do not assume.
+```
+
+---
+
+## 39. Implement from spec
+
+```
+Implement this spec in [LANGUAGE/FRAMEWORK].
+
+Spec:
+[PASTE]
+
+Requirements:
+- Idiomatic, readable code
+- Error handling for [KEY FAILURE MODES]
+- Minimal dependencies
+- Include usage example
+- Do not add unrelated refactors
+```
+
+---
+
+## 40. Code review (security + simplicity)
+
+```
+Review this diff/code for a solo indie project. Prioritize: security (auth, injection, secrets), cost control (API abuse), and simplicity.
+
+Code:
+---
+[PASTE]
+---
+
+Output: Critical / Major / Minor findings with suggested fixes. No style nits unless they hide bugs.
+```
+
+---
+
+## 41. Test generation
+
+```
+Write tests for:
+
+[CODE OR FUNCTION]
+
+Framework: [pytest / vitest / etc.]
+Cover: happy path, edge cases listed here [LIST], and failure modes. Prefer fewer high-value tests over exhaustive boilerplate.
+```
+
+---
+
+## 42. Debug from error
+
+```
+I'm seeing this error:
+
+```
+[ERROR + STACK]
+```
+
+Relevant code:
+```
+[CODE]
+```
+
+What I expected: [EXPECTED]
+What happened: [ACTUAL]
+
+Give: most likely causes (ranked), what to log next, and a concrete fix patch.
+```
+
+---
+
+## 43. Refactor for free-tier limits
+
+```
+Refactor this so it fits free-tier constraints: [e.g. 10ms CPU, 128MB, 100k reads/day].
+
+Code:
+[PASTE]
+
+Explain tradeoffs. Propose caching / batching / queueing only if needed.
+```
+
+---
+
+## 44. Agent tool-call design
+
+```
+Design tools for an LLM agent that will: [GOAL]
+
+Constraints: no cold outbound messages; no credential exfiltration; spend cap $[AMOUNT]/day; human approve for public posts in week 1.
+
+For each tool: name, description, JSON schema, side effects, and whether it needs human confirmation.
+```
+
+\newpage
+# Part II — Agent Workflows
+
+# Workflow 1 — Content Repurposing Pipeline
+
+**Goal:** Turn one long artifact (blog, challenge log, or demo notes) into a week of distribution without sounding like spam.  
+**Operator time:** ~30–45 min/day after setup (mostly approve/edit).  
+**Free-tier first.**
+
+---
+
+## Tools (free tiers)
+
+| Step | Tool | Free tier notes |
+| --- | --- | --- |
+| Draft | Claude / ChatGPT / local LLM | Free or low-cost API; use kit prompts 11–12 |
+| Edit queue | Notion or GitHub markdown | Free |
+| Scheduling | Native X/LinkedIn scheduling or Buffer free | Stay within platform rules |
+| Short video | CapCut / Remotion (self-hosted) | CapCut free; Remotion needs Node |
+| Thumbnails | Canva free | Optional |
+| Analytics | Native insights + Plausible/Umami | Prefer privacy-friendly |
+
+**Paid upgrades later (from revenue):** Buffer/Typefully paid, Descript, Canva Pro (~$15 budget line in challenge plan).
+
+---
+
+## Pipeline (step-by-step)
+
+### 1. Capture source (Day 0 of content cycle)
+- Save the canonical piece in `/content/source/YYYY-MM-DD-slug.md`.
+- Frontmatter: `title`, `day`, `revenue_to_date`, `cta`, `disclosure`.
+
+### 2. Atomize (agent + human skim)
+Run prompt **#11** (thread / LinkedIn / blog adaptation) and **#12** (challenge log) against the source.
+
+Extract a checklist of atoms:
+- [ ] 1 X thread (8–12 posts)
+- [ ] 3 standalone posts (tips / lessons / metrics)
+- [ ] 1 newsletter section
+- [ ] 1 Short/TikTok script (30–45s)
+- [ ] 1 FAQ or myth-bust snippet
+
+### 3. Ethics gate (non-negotiable)
+Before anything is scheduled, check:
+- Numbers match the public counter / books
+- No fake scarcity or fake testimonials
+- “Shutdown” language marked as **challenge premise**
+- Affiliates disclosed if any
+- AI-assisted label per site policy
+
+### 4. Visual package
+- One consistent template: day number, $ earned, honest subtitle
+- Screen recordings > talking head if no face available
+- Burned-in captions for mute viewing
+
+### 5. Schedule & publish
+| Day | Asset |
+| --- | --- |
+| Mon | Long thread or blog + site update |
+| Tue | Short #1 |
+| Wed | Standalone lesson post |
+| Thu | Short #2 + newsletter draft |
+| Fri | Metrics post + product CTA |
+| Sat | Soft community share (one place, rules-compliant) |
+| Sun | Retro + next-week outline |
+
+### 6. Measure → kill/double-down
+Track: profile clicks, link clicks, email signups, checkout starts — not vanity likes alone.  
+**Kill** formats with clicks but zero intent for 2 weeks. **Double-down** on formats that produce email or checkout events.
+
+---
+
+## Agent handoff checklist
+
+```
+[ ] Source filed
+[ ] Atoms drafted
+[ ] Ethics gate passed
+[ ] CTA points to live CHECKOUT_URL or waitlist
+[ ] Human approve queue cleared (esp. first 7 days)
+[ ] Counter JSON updated if revenue changed
+```
+
+---
+
+## Failure modes
+
+- Over-posting the same CTA → audience fatigue. Cap product mentions to 1 clear CTA per piece.
+- Inventing engagement hooks with false claims → reputation death. Prefer boring honesty.
+
+\newpage
+# Workflow 2 — Product Research Loop
+
+**Goal:** Decide what to build or update next using public signals only (no cold outreach).  
+**Cadence:** Weekly (60–90 min) + light daily skim.
+
+---
+
+## Tools (free tiers)
+
+| Need | Tool |
+| --- | --- |
+| Social listening | X search, Reddit search (manual), HN Algolia |
+| SEO hints | Google Search Console (after site live), free keyword ideas from autocomplete |
+| Competitor pages | Browser + notes (no scraping behind login) |
+| Synthesis | LLM + prompts #1–7 |
+| Scorecard | Notion / spreadsheet |
+
+---
+
+## Loop
+
+### Step A — Collect signals (inbox of intent)
+Create a weekly inbox with only **inbound or public** items:
+- Replies / comments asking “do you have X?”
+- Waitlist reasons
+- Support questions that sound like product gaps
+- Public threads in your niche (save URLs)
+
+Skip: purchased lead lists, scraped emails, unsolicited DMs at scale.
+
+### Step B — Cluster
+Tag each signal: `problem`, `willing_to_pay?`, `build_size (S/M/L)`, `distribution_fit`.
+
+### Step C — Score (simple)
+Score 1–5 each: Demand clarity · Payment willingness · Fit with AI-solo delivery · Time-to-ship · Support burden (invert).
+
+Ship candidates with high demand + low support + shipable in ≤14 days first (cash engine). Park high-ceiling SaaS ideas for Phase 2.
+
+### Step D — Smallest test
+Pick one:
+1. **Landing waitlist** with honest “not built yet”
+2. **Pre-sell** outline PDF at low price (fulfill or refund)
+3. **Concierge** delivery to 3 inbound people (manual)
+
+### Step E — Decision memo
+Use prompt **#20**. Outcomes: Build / Defer / Kill. Publish the decision in the challenge log when useful.
+
+---
+
+## Research SOP (45-minute deep dive)
+
+1. Prompt #1 market scan (15 min + verify links)
+2. Prompt #2 on top 2 competitors (15 min)
+3. Prompt #3 on pasted customer language (10 min)
+4. Update scorecard (5 min)
+
+---
+
+## Done when
+
+You can finish this sentence with a straight face:
+
+> “Next product is ____ for ____ because ____; kill if ____ by Day ____.”
+
+\newpage
+# Workflow 3 — Launch Checklist
+
+**Goal:** Ship a digital product or MVP without missing trust-critical steps.  
+**Use for:** PDF/Notion kits, templates, and thin SaaS wedges.
+
+---
+
+## Tools
+
+| Area | Free / cheap choice |
+| --- | --- |
+| Hosting files | Lemon Squeezy file delivery / Cloudflare R2 |
+| Site | Cloudflare Pages (static HTML) |
+| Payments | Lemon Squeezy (MoR) |
+| Email | Beehiiv free |
+| Analytics | Plausible self-host / Umami / Cloudflare Web Analytics |
+| Repo | GitHub |
+
+---
+
+## T-minus checklist
+
+### Product readiness
+- [ ] v1 contents match sales page (no bait-and-switch)
