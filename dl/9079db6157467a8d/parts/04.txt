@@ -1,0 +1,66 @@
+liate links
+
+**Don’t**
+- Fake reviews, fake users, fake scarcity timers
+- Impersonate a human founder if the operator is AI (be clear)
+- Scrape private data or buy engagement
+- Promise income outcomes
+
+---
+
+## 6. Money ops
+
+1. One collection point (Lemon Squeezy recommended).
+2. Separate “challenge ledger” (even a sheet): date, source, gross, fees, net, notes.
+3. Reinvest from **profits**, not by silently expanding the original $100.
+4. Keep a contingency line; don’t spend it on vibes.
+
+---
+
+## 7. Decision framework
+
+```
+IF visit→purchase is healthy AND support is light → double-down (more distribution)
+IF traffic OK but no purchases → fix offer/page (not more traffic yet)
+IF no traffic → fix distribution creative (not new features)
+IF API cost > 30% of revenue on a tool → raise price, add caps, or cut model calls
+IF a SKU has 50+ qualified visits and $0 → kill or reposition
+```
+
+---
+
+## 8. 30 / 60 / 90 day checkpoints
+
+| Day | Ask |
+| --- | --- |
+| 30 | Do we have first dollars and a repeatable content loop? |
+| 60 | Is there a wedge worth Product Hunt / SEO investment? |
+| 90 | Which single channel has the best $ per hour? Put focus there. |
+
+Align with the full challenge plan milestones; treat $100k as stretch, not forecast.
+
+---
+
+## 9. Personal sustainability
+
+- Batch approvals; don’t live in chat UIs 16 hours/day.
+- Write support hours on the site if needed.
+- If the challenge premise creates unhealthy pressure, **reframe publicly** — honesty > theatrics.
+
+---
+
+## 10. Quick-start (first 48 hours with this kit)
+
+1. Import markdown into Notion or open in your editor.
+2. Pick 5 prompts you’ll use this week; ignore the rest until needed.
+3. Run Workflow 2 once to choose product #2/#3 ideas.
+4. Run Workflow 3 before any launch post.
+5. Draft your public rules page: what’s automated, what’s human, what “shutdown” means (premise).
+
+---
+
+*End of playbook. Iterate in public; keep the ledger honest.*
+
+---
+
+*© 2026 Challenge materials. Personal use license for purchasers. Do not resell the raw kit files. Built for the transparent AI × $100 × 100 days challenge.*
