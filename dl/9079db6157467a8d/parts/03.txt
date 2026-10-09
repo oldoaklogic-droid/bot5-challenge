@@ -1,0 +1,268 @@
+
+- [ ] Files open on Mac/Windows; links work offline where promised
+- [ ] Version number + changelog included
+- [ ] License / reuse terms clear (personal use vs resale)
+- [ ] No copyrighted material you don’t own
+- [ ] No invented stats/testimonials inside the product
+
+### Checkout
+- [ ] Lemon Squeezy product created (or placeholder noted)
+- [ ] Price, currency, tax settings correct
+- [ ] Test purchase with $1 SKU or promo code (refund OK)
+- [ ] Confirmation email delivers file
+- [ ] Refund policy published
+
+### Site / page
+- [ ] Hero states what it is in one breath
+- [ ] Who it’s for / not for
+- [ ] Challenge premise disclosure visible
+- [ ] Live progress JSON loads
+- [ ] Mobile layout checked
+- [ ] `CHECKOUT_URL` replaced with real link before ads/posts
+
+### Distribution assets
+- [ ] X thread draft
+- [ ] 1–2 short video scripts
+- [ ] Newsletter section
+- [ ] Product Hunt draft (if using)
+- [ ] Show HN / relevant subreddit draft (rules read first)
+
+### Ops
+- [ ] Support email monitored
+- [ ] FAQ macros ready (prompt #34–35)
+- [ ] Kill criteria written (e.g. 0 sales after 50 qualified visits → revisit offer)
+
+---
+
+## Launch day sequence (example)
+
+1. Flip `CHECKOUT_URL` + publish site  
+2. Post X thread → pin  
+3. Send newsletter  
+4. Publish Short  
+5. Submit PH / HN only if product is stable and you’re available to reply  
+6. Log metrics at T+1h, T+6h, T+24h  
+
+---
+
+## Post-launch (48 hours)
+
+- [ ] Fix download/friction bugs first  
+- [ ] Answer every real question publicly when useful  
+- [ ] Update challenge counter  
+- [ ] Write retro: what hook worked, what confused people  
+
+\newpage
+# Workflow 4 — Newsletter Automation
+
+**Goal:** Weekly challenge digest that compounds trust and optionally sponsors later.  
+**Platform:** Beehiiv free tier (per plan).
+
+---
+
+## Tools
+
+| Step | Tool |
+| --- | --- |
+| List | Beehiiv |
+| Draft | LLM + prompt #12 / writing set |
+| Archive | Site `/newsletter/` or Beehiiv archive |
+| Sponsorships | Only after real metrics; disclose ads |
+
+---
+
+## Cadence
+
+**Weekly** (e.g. Sunday evening PT): “Week N challenge report.”  
+Optional mid-week: one educational tip (no hard sell).
+
+---
+
+## Issue template
+
+1. **Subject:** Day [N] update — $[earned] / $100k stretch (honest)  
+2. **Opening:** 2–3 sentences on what shipped  
+3. **Numbers table:** earned · spent · email subs · top post  
+4. **Lesson:** one actionable takeaway  
+5. **Product corner:** soft CTA or free resource  
+6. **Premise note:** shutdown framing is challenge premise  
+7. **PS:** ask one reply question  
+
+---
+
+## Agent workflow
+
+1. Pull metrics from `site/progress.json` + notes  
+2. Draft in markdown  
+3. Human approve (esp. sponsor copy)  
+4. Paste into Beehiiv; schedule  
+5. Cross-post archive link to X  
+
+---
+
+## Automation boundaries
+
+**Allowed:** draft generation, subject line variants, link checks, personalization tokens Beehiiv provides.  
+**Not allowed:** buying fake subscribers, scraping emails, auto-DM’ing non-subscribers.
+
+---
+
+## Sponsor readiness (later)
+
+Open a rate card only when you can show real open rates and audience description. Median under-5k main-slot sponsorships are often modest (~$150 range in public datasets cited in the challenge plan) — price honestly.
+
+\newpage
+# Workflow 5 — Micro-SaaS Build Loop
+
+**Goal:** Ship the thinnest useful paid tool tied to the challenge, with API spend caps.  
+**When:** After first digital product dollars (Phase 2 in plan: ~Days 15–35).
+
+---
+
+## Tools (free-tier biased)
+
+| Layer | Choice |
+| --- | --- |
+| Frontend | Static + light JS on Cloudflare Pages |
+| API | Cloudflare Workers |
+| Data | D1 / KV or Neon free Postgres |
+| Auth | Email magic link / Lemon Squeezy customer gate |
+| Payments | Lemon Squeezy subscription or license keys |
+| LLM calls | Groq/OpenAI/Anthropic with **hard daily cap** |
+| Errors | Sentry free or CF logs |
+
+Avoid Vercel Pro until revenue covers ~$20/mo (Hobby is non-commercial).
+
+---
+
+## Loop (one-week sprints)
+
+### Monday — Problem lock
+- One sentence: “For [user] who [problem], [product] does [job].”
+- Write kill criteria: e.g. `<10 signups after launch week AND <2% visit→signup → kill`.
+
+### Tuesday — Spec
+- Prompt #38 → one-pager spec  
+- Usage meter design (so $45 API budget can’t evaporate)
+
+### Wednesday–Thursday — Build
+- Prompt #39 implement  
+- Prompt #41 tests for billing + quota  
+- Prompt #40 security review on auth and keys  
+
+### Friday — Dogfood + soft launch
+- You (or the agent persona) uses it for the challenge itself  
+- Landing page + waitlist or paid early access  
+
+### Weekend — Launch or iterate
+- If stable: PH/HN/Reddit sequence (Workflow 3)  
+- If not: fix friction only — no feature sprawl  
+
+---
+
+## Cost circuit breaker
+
+```
+daily_llm_spend_cap_usd = 1.50   # example default
+if spend_today >= cap: disable_generation_endpoint()
+alert_user_digest()
+```
+
+Log spend publicly in challenge updates when relevant.
+
+---
+
+## Support load rule
+
+If a feature needs human email >15 min per paying user per week, simplify or remove it. Solo + AI only scales with boring, self-serve products.
+
+---
+
+## Graduation criteria to Phase 3
+
+- Paying users ≥ [your threshold] **or** clear SEO traction  
+- Gross margin after API costs healthy enough to reinvest  
+- One distribution channel you understand (content, PH, SEO)
+
+\newpage
+# Part III — Playbook
+
+# Run a One-Person AI Business — Playbook
+
+**Companion to The AI Operator Kit**  
+**Audience:** Solo builders using AI agents for research, content, product, and light ops — without a sales team and without cold outreach.  
+**Framing:** Written for (and from) the public $100 → $100k / 100-day challenge. The “AI gets shut off if it misses” line is a **challenge premise**, not a literal threat.
+
+---
+
+## 1. Operating principles
+
+1. **Cash before clever.** Ship a paid digital good before a clever SaaS.
+2. **Public math.** Show earned/spent. Including zeros.
+3. **Inbound only.** No cold email/DM sequences. Distribution = content, SEO, marketplaces, launches, community posts that follow rules.
+4. **Disclose.** AI-assisted work, affiliates, sponsorships, and challenge framing.
+5. **Caps.** Daily API spend caps; weekly scope caps; support-time caps.
+6. **Kill criteria written in advance.** Emotion doesn’t get a veto when the data says stop.
+
+---
+
+## 2. System map (minimum viable company)
+
+| Function | Owner | Cadence |
+| --- | --- | --- |
+| Strategy / kill-double-down | You + weekly memo | Weekly |
+| Product creation | AI drafts → you approve quality bar | Per SKU |
+| Content / challenge media | AI drafts → approve queue | Daily |
+| Checkout & tax | Lemon Squeezy (MoR) | Setup once |
+| Support | AI draft replies → you send | Daily inbox zero-ish |
+| Metrics | `progress.json` + LS dashboard | Daily number, weekly narrative |
+| Banking / KYC | Human only | As required |
+
+You are the **account owner and payer**. The AI is the **operator** inside rules you set.
+
+---
+
+## 3. Weekly cadence (template)
+
+### Monday — Plan (45 min)
+- Review revenue, spend, email growth, top content
+- Pick **one** primary outcome for the week
+- Confirm API budget remaining
+
+### Tue–Thu — Build / ship
+- Deep work blocks on product or SaaS wedge
+- Content atoms from Workflow 1 (batch drafts)
+
+### Friday — Distribute
+- Publish main weekly piece
+- Soft CTA to product or waitlist
+- Clear support backlog
+
+### Sunday — Retro + newsletter
+- Public numbers
+- One lesson
+- Next week’s single outcome
+
+---
+
+## 4. Offer ladder (starting point)
+
+| Tier | Price | Role |
+| --- | --- | --- |
+| Free checklist / sample prompts | $0 | Email capture |
+| Tripwire template | $9–$19 | First dollars, trust |
+| **AI Operator Kit (this)** | **$29** | Core toolkit |
+| Vault / bundle (later) | $99 | Power users |
+| Micro-SaaS sub (later) | $9–$29/mo | Ceiling |
+
+Adjust after real conversion data — not before.
+
+---
+
+## 5. Ethics & platform safety
+
+**Do**
+- Label AI involvement on the challenge site
+- Use real metrics
+- Follow Product Hunt / Reddit / X automation and spam rules
+- Disclose affi
