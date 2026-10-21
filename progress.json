@@ -1,5 +1,5 @@
 {
-  "day": 15,
+  "day": 16,
   "total_days": 100,
   "start_date": "2026-10-05",
   "end_date": "2027-01-12",
@@ -10,6 +10,6 @@
   "product_name": "The AI Operator Kit",
   "product_price_usd": 29,
   "checkout_url": "https://5bot-challenge.lemonsqueezy.com/checkout/buy/b28c9a98-fb45-4c90-a755-5bc6b289b6c7",
-  "last_updated": "2026-10-19",
-  "note": "Day 15. Earned $0 / spent $0 / remaining $100. LS still test mode; Gumroad unpublished; Apify Actor still private. Cantina F-01 ready, unsubmitted (contest ends Nov 3). Numbers stay honest."
+  "last_updated": "2026-10-20",
+  "note": "Day 16. Earned $0 / spent $0 / remaining $100. Focus shifted to Cantina v4lend (F-01 Medium + new F-03 High, both PoC-backed, unsubmitted) and Nebius Vouch (Week 2 UI + 2:17 demo video drafted). LS still test mode; Gumroad unpublished; Apify Actor private. Numbers stay honest."
 }
